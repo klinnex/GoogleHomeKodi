@@ -7,7 +7,7 @@ VOLUME /config
 WORKDIR /home/node/app
 
 RUN mkdir /tmp/GoogleHomeKodi &&\
-git clone https://github.com/OmerTu/GoogleHomeKodi.git /tmp/GoogleHomeKodi
+git clone https://github.com/OmerTu/GoogleHomeKodi.git /tmp/GoogleHomeKodi &&\
 cd /tmp/GoogleHomeKodi &&\
 git checkout &&\
 git submodule update --init --recursive &&\
