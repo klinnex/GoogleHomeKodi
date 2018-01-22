@@ -7,7 +7,7 @@ VOLUME /config
 WORKDIR /home/node/app
 
 COPY package*.json ./
-RUN npm install --production && npm cache clean --force
+#RUN npm install --production && npm cache clean --force
 COPY . .
 
 EXPOSE 8099
