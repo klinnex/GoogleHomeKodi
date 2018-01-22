@@ -6,9 +6,11 @@ ENV PORT=8099
 VOLUME /config
 WORKDIR /home/node/app
 
-COPY package*.json ./
+RUN git clone https://github.com/OmerTu/GoogleHomeKodi.git /tmp/ &&\
+cp /tmp/package*.json ./ &&\
 #RUN npm install --production && npm cache clean --force
-COPY . .
+cp /tmp/* ./ &&\
+rm -Rf /tmp/*
 
 EXPOSE 8099
 USER node
